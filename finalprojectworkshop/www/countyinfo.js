@@ -6,7 +6,7 @@
         if (this.readyState == 4 && this.status == 200) {
             var country = JSON.parse(this.responseText);
             console.log(country);
-            maketable(country); //Generates content
+            showinfo(country); //Generates content
         }
         else
         { 
@@ -22,26 +22,48 @@
     xmlhttp.send();
  }
 
- function make_row(arg1,arg2,table){
-    var tr = document.createElement('tr');
-    var td1 = document.createElement('td');
-    var td2 = document.createElement('td');
-    var text = document.createTextNode(arg1);
-    td1.appendChild(text);
-    text = document.createTextNode(arg2);
-    td2.appendChild(text);
-    tr.appendChild(td1);
-    tr.appendChild(td2);
-    table.appendChild(tr);
-  }
-
- function maketable(conditions) { // Builds out the table of data
+ function showinfo(conditions) { 
     let workspace = document.getElementById("content");
     workspace.innerHTML = "";
 
-    var header = document.createElement('h4'); //Prep the table header
+    var header = document.createElement('h4'); 
     var textnode = document.createTextNode(conditions.country);
     header.appendChild(textnode);
     workspace.appendChild(header);
-    //workspace.appendChild(header);
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        theme: "light1", // "light1", "light2", "dark1", "dark2"
+        title:{
+            text: "Corona Stats"
+        },
+        data: [{        
+            type: "column",  
+            dataPoints: [      
+                { y: conditions.cases, label: "Cases" },
+                { y: conditions.deaths,  label: "Deaths" },
+                { y: conditions.recovered,  label: "Recovered" },
+                { y: conditions.active,  label: "Active" },
+                { y: conditions.critical,  label: "Critical" },
+                { y: conditions.tests, label: "Tests" }
+            ]
+        }]
+    });
+    chart.render();
+
+    var chart2 = new CanvasJS.Chart("chartContainer2", {
+        animationEnabled: true,
+        theme: "light1", // "light1", "light2", "dark1", "dark2"
+        title:{
+            text: "Today's Stats"
+        },
+        data: [{        
+            type: "column",  
+            dataPoints: [      
+                { y: conditions.todayCases, label: "Today's Cases" },
+                { y: conditions.todayDeaths,  label: "Today's Deaths" }
+            ]
+        }]
+    });
+    chart2.render();
+
   }
