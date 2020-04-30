@@ -1,4 +1,13 @@
 
+ // Wait until DOM is ready to register callbacks
+ document.addEventListener("DOMContentLoaded", function(){
+    //Do this when DOM is loaded
+    //Set event listeners/handlers for buttons
+    document.getElementById('getinfo').onclick = doinfo;
+    document.getElementById('makefav').onclick = domakefav;
+    
+  });
+
  var doinfo = function(){
     console.log("REQUESTING COUNTRY");
     var xmlhttp = new XMLHttpRequest();
@@ -65,5 +74,6 @@
         }]
     });
     chart2.render();
-
   }
+
+  

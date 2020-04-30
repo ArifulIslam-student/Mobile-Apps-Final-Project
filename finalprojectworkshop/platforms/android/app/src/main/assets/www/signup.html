@@ -10,7 +10,8 @@
 
     <!-- Favicons -->
     <script  src="cordova.js"></script>
-
+    <script src="createaccount.js"></script>
+    
 
     <style>
       .bd-placeholder-img {
@@ -37,9 +38,12 @@
   
   <h1 class="h3 mb-3 font-weight-normal" style="color:yellow;">Create Your Account</h1>
   <label for="inputEmail" class="sr-only">Username</label>
-  <input type="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+  <input type="email" id="newinputusername" class="form-control" placeholder="Username">
+
   <label for="inputPassword" class="sr-only">Password</label>
-  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+  <input type="password" id="newinputpassword" class="form-control" placeholder="Password">
+
+  <button class="btn btn-lg btn-primary btn-block" id="signup">Test Sign Up</button>
   <a class="btn btn-lg btn-primary btn-block" href="home.html">Sign Up</a>
 </form>
 </body>
