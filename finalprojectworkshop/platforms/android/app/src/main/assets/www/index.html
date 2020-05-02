@@ -11,7 +11,18 @@
     <!-- Favicons -->
     <script  src="cordova.js"></script>
     <script src="login.js"></script>
-    
+    <script src="createaccount.js"></script>
+    <script type="text/javascript">
+    function gplusLogin(){
+      window.plugin.googleplus.login({
+
+      }, function(result){
+        alert(JSON.stringify(resut));
+      }, function(error){
+        alert(JSON.stringify(error))
+      });
+    }
+    </script>
 
 
     <style>
@@ -36,8 +47,9 @@
   <body class="text-center">
     <form class="form-signin">
       <h1 class="h3 mb-3 font-weight-normal" style="color:yellow;">Welcome to Corona Central</h1>
-  <!--<img class="mb-4" src="pictures/coronavirus.jpg" alt="Placeholder" width="72" height="72">-->
-  <h1 class="h3 mb-3 font-weight-normal" style="color:yellow;">Please sign in</h1>
+
+  <p class="h3 mb-3 font-weight-normal" style="color:yellow;">
+   Click "Sign-Up", then click "Login" <br>to make an account</p>
 
   <label for="inputEmail" class="sr-only">Username</label>
   <input type="email" id="inputusername" class="form-control" placeholder="Username">
@@ -45,9 +57,10 @@
   <label for="inputPassword" class="sr-only">Password</label>
   <input type="password" id="inputpassword" class="form-control" placeholder="Password">
 
-  <button class="btn btn-lg btn-primary btn-block" id="signin">Testing username/password</button>
-  <a class="btn btn-lg btn-primary btn-block" href="home.html">Sign In</a>
-  <a class="btn btn-lg btn-primary btn-block" href="signup.html">Don't have an Account?</a>
+  <button class="btn btn-lg btn-primary btn-block" id="signin">Sign-In</button>
+  <button class="btn btn-lg btn-primary btn-block" id="signup">Sign-Up</button>
+  <button class="btn btn-lg btn-primary btn-block" id="login">Login</button>
+  <button class="btn btn-lg btn-primary btn-block" onclick="gplusLogin()">Login With Google</button>
 </form>
 </body>
 </html>

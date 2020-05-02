@@ -6,16 +6,30 @@
   });
 
   var dosignup = function(){
-    var newUsername_array = [];
-    var newPassword_array = [];
-    var newUsername = document.getElementById("newinputusername").value;
-    var newPassword = document.getElementById("newinputpassword").value;
-    if(newUsername == " " && newPassword == " ") {
-        window.alert("username/password empty please fill them out");
-    }
-    else{
-        newUsername_array.push(newUsername);
-        newPassword_array.push(newPassword);
+    var new_username = " ";
+    var new_password = " ";
+    makelogin(new_username, new_password);
+  }
+
+  function makelogin(username, password){
+      if(document.getElementById("inputusername").value == " " && document.getElementById("inputpassword").value == " "){
+          alert("Username/password fields are empty")
+      }
+      else{
+        username = document.getElementById("inputusername").value;
+        password = document.getElementById("inputpassword").value;
+      }
+      document.getElementById('login').onclick = function() {
+        uselogin(username, username)
+     };
+
+  }
+
+  function uselogin(username, password){
+      if(document.getElementById("inputusername").value == username && document.getElementById("inputpassword").value == password){
         location.replace("home.html");
-    }
-}
+      }
+      else{
+        alert("invalid username/password");
+      }
+  }

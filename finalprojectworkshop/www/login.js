@@ -1,3 +1,15 @@
+document.addEventListener('deviceready', function () {
+    if (navigator.notification) { // Override default HTML alert with native dialog
+        window.alert = function (message) {
+            navigator.notification.alert(
+                message,    // message
+                null,       // callback
+                "Corona Central", // title
+                'OK'        // buttonName
+            );
+        };
+    }
+  }, false);
 
  // Wait until DOM is ready to register callbacks
  document.addEventListener("DOMContentLoaded", function(){
@@ -13,14 +25,6 @@
       var hardPassword = "password";
       if (inputUsername == hardUsername && inputPassword == hardPassword) {
         location.replace("home.html");
-    }
-    else if(newUsername_array.length != 0 && newPassword_array.length != 0) {
-        var array_length = newUsername_array.length;
-        for(i = 0; i <= array_length; i++){
-            if(inputUsername == newUsername_array[i] && inputPassword == newPassword_array[i]){
-                location.replace("home.html");
-            }
-        }
     }
     else { 
         alert("invalid username/password");
