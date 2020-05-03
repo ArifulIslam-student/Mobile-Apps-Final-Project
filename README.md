@@ -1,5 +1,6 @@
 # Mobile-Apps-Final-Project
 My Final Project for Mobile Apps where I create a Cordova Hybrid app about the coronavirus outbreak. 
+
 This app will bring you to a login screen, this is the index.html file. Here you a few actions to choose from.
 The "Sign-In" button uses a hardcoded username/password so if the input fields don't match an alert will pop up.
 The hardcoded username/password is "user" and "password" respectively.
@@ -44,7 +45,7 @@ https://www.aljazeera.com/news/2020/04/sunlight-humidity-kill-coronavirus-fastes
 The codes can be found by following this path.
 finalprojectworshop/www
 
-Not that the sigup.html and the favorites.html are not utilized, there here because I orgininally wnated to use them, but I didn't how to properly intergrate them.
+Note that the sigup.html and the favorites.html are not utilized, there here because I orgininally wnated to use them, but I didn't how to properly intergrate them.
 
 All other files are used.
 
