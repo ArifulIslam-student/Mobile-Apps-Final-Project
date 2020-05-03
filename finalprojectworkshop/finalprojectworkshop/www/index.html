@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Corona Central: Login</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="bootstrap-4.4.1-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- JavaScript Files -->
+    <script  src="cordova.js"></script>
+    <script src="login.js"></script>
+    <script src="createaccount.js"></script>
+    <script src="googlelogin.js"></script>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- CSS files -->
+    <link href="signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    <form class="form-signin">
+      <h1 class="h3 mb-3 font-weight-normal" style="color:yellow;">Welcome to Corona Central</h1>
+
+  <p class="h3 mb-3 font-weight-normal" style="color:yellow;">
+   Click "Sign-Up", then click "Login" <br>to make an account</p>
+
+  <label for="inputEmail" class="sr-only">Username</label>
+  <input type="email" id="inputusername" class="form-control" placeholder="Username">
+
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputpassword" class="form-control" placeholder="Password">
+
+  <button class="btn btn-lg btn-primary btn-block" id="signin">Sign-In</button>
+  <button class="btn btn-lg btn-primary btn-block" id="signup">Sign-Up</button>
+  <button class="btn btn-lg btn-primary btn-block" id="login">Login</button>
+  <button class="btn btn-lg btn-primary btn-block" id="google">Login With Google</button>
+
+</form>
+</body>
+</html>
