@@ -10,6 +10,7 @@
 
  var doinfo = function(){
     console.log("REQUESTING COUNTRY");
+    //Performs api call
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -31,6 +32,7 @@
     xmlhttp.send();
  }
 
+ //Organizes the contents from the api call into tables and displays them in the content div
  function showinfo(conditions) { 
     let workspace = document.getElementById("content");
     workspace.innerHTML = "";
@@ -39,6 +41,8 @@
     var textnode = document.createTextNode(conditions.country);
     header.appendChild(textnode);
     workspace.appendChild(header);
+    
+    //Creates the graph where the overall corona stats will be displayed
     var chart = new CanvasJS.Chart("chartContainer", {
         animationEnabled: true,
         theme: "light1", // "light1", "light2", "dark1", "dark2"
@@ -59,6 +63,7 @@
     });
     chart.render();
 
+    //Creates the graph where the most recent corona stats will be displayed
     var chart2 = new CanvasJS.Chart("chartContainer2", {
         animationEnabled: true,
         theme: "light1", // "light1", "light2", "dark1", "dark2"

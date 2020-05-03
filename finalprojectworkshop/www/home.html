@@ -8,11 +8,10 @@
     <!-- Bootstrap core CSS -->
     <link href="bootstrap-4.4.1-dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Favicons -->
+    <!-- JavaScript files -->
     <script  src="cordova.js"></script>
     <script src="countyinfo.js"></script>
     <script src="favorites.js"></script>
-    <script src="seefavorite.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
     <style>
@@ -31,20 +30,23 @@
         }
       }
     </style>
-    <!-- Custom styles for this template -->
+    <!-- CSS files -->
     <link href="homestyle.css" rel="stylesheet">
   </head>
   <body>
+    <!-- Nava Bar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" href="#" id="seefav" type="submit">See Favorited</a>
   <a class="navbar-brand" href="index.html">Logout</a>
 </nav>
 
+<!-- Where the main contents are located -->
 <main role="main" class="container">
 
   <div class="starter-template">
     <h1>Welcome!</h1>
     <p>Type in a Country's name to get Corona related info about it</p>
+
     <div class="input-group input-group-lg">
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-lg">Country Name</span>
@@ -52,16 +54,18 @@
       <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" 
       id="countryName">
     </div>
+
     <br>
     <button type="button" class="btn btn-secondary btn-lg btn-block" id="getinfo">Get Info</button>
     <br>
     <button type="button" class="btn btn-secondary btn-lg btn-block" id="makefav" type="submit">Favorite Country?</button>
   </div>
 
+  <!-- Where the tables are displayed -->
   <div id="content"></div>
   <div id="chartContainer" style="height: 300px; width: 100%;"></div>
   <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
 
-</main><!-- /.container -->
+</main>
     </body>
 </html>

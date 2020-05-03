@@ -8,22 +8,16 @@
     <!-- Bootstrap core CSS -->
 <link href="bootstrap-4.4.1-dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Favicons -->
+    <!-- JavaScript Files -->
     <script  src="cordova.js"></script>
     <script src="login.js"></script>
     <script src="createaccount.js"></script>
-    <script type="text/javascript">
-    function gplusLogin(){
-      window.plugin.googleplus.login({
-
-      }, function(result){
-        alert(JSON.stringify(resut));
-      }, function(error){
-        alert(JSON.stringify(error))
-      });
-    }
-    </script>
-
+    <script src="googlelogin.js"></script>
+    <script type ="text/javascript">
+      function clicked(){
+          window.location.replace("favorites.html");
+      }
+      </script>
 
     <style>
       .bd-placeholder-img {
@@ -41,7 +35,7 @@
         }
       }
     </style>
-    <!-- Custom styles for this template -->
+    <!-- CSS files -->
     <link href="signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
@@ -60,7 +54,9 @@
   <button class="btn btn-lg btn-primary btn-block" id="signin">Sign-In</button>
   <button class="btn btn-lg btn-primary btn-block" id="signup">Sign-Up</button>
   <button class="btn btn-lg btn-primary btn-block" id="login">Login</button>
-  <button class="btn btn-lg btn-primary btn-block" onclick="gplusLogin()">Login With Google</button>
+  <button class="btn btn-lg btn-primary btn-block" id="google">Login With Google</button>
+  <button onclick="clicked()">clicked</button>
+
 </form>
 </body>
 </html>

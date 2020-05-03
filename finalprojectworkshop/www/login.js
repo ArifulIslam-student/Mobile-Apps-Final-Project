@@ -1,3 +1,4 @@
+//Will alter the default alert messages
 document.addEventListener('deviceready', function () {
     if (navigator.notification) { // Override default HTML alert with native dialog
         window.alert = function (message) {
@@ -18,6 +19,7 @@ document.addEventListener('deviceready', function () {
     document.getElementById('signin').onclick = dologin;
   });
 
+  //Creates hard username/password and checks if input fields match them
   var dologin = function(){
       var inputUsername = document.getElementById("inputusername").value;
       var inputPassword = document.getElementById("inputpassword").value;
