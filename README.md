@@ -10,6 +10,8 @@ If the input fields are empty and "Sign-Up" is pressed and alert will pop up.
 Note that the saved username/passwords temporarily stored once you leave the page they are gone.
 The "Login With Google" button will log your devices to a google account of your chooseing.
 
+![](pictures/loginscreen.jpg)
+
 After the login screen you will be taken to the home screen, this is the home.html file.
 Here you can type in a county name of your choosing and press the "Get Info" button to get the overall stats related to Corona
 such as # of cases, deaths, etc. The lasted stats are also displayed, both stats are orgainized in a graph.
@@ -18,6 +20,7 @@ After that if the user presses the "See Favorited" button the input field will b
 Note that one country could be favorited at a time so when pressing "Favorite Country?" again it'll overwrite the previously favorited country with whatever is in the input field. Like before with the login screen once you leave the home screen the favorited country will 
 be gone. To go back to the login screen press the "Logout" button.
 
+![](pictures/homescreen.jpg)
 
 Sources I used to create this project:
 
