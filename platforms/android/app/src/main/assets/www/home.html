@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Corona Central: Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-4.4.1-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <script  src="cordova.js"></script>
+    <script src="countyinfo.js"></script>
+    <script src="favorites.js"></script>
+    <script src="seefavorite.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="homestyle.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#" id="seefav" type="submit">See Favorited</a>
+  <a class="navbar-brand" href="index.html">Logout</a>
+</nav>
+
+<main role="main" class="container">
+
+  <div class="starter-template">
+    <h1>Welcome!</h1>
+    <p>Type in a Country's name to get Corona related info about it</p>
+    <div class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg">Country Name</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" 
+      id="countryName">
+    </div>
+    <br>
+    <button type="button" class="btn btn-secondary btn-lg btn-block" id="getinfo">Get Info</button>
+    <br>
+    <button type="button" class="btn btn-secondary btn-lg btn-block" id="makefav" type="submit">Favorite Country?</button>
+  </div>
+
+  <div id="content"></div>
+  <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+  <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
+
+</main><!-- /.container -->
+    </body>
+</html>
