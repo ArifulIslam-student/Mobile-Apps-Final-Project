@@ -53,10 +53,15 @@ http://ccoenraets.github.io/cordova-tutorial/index.html
 
 Download the finalprojectworshop folder and run it on either an emulator or real device. Note that this project only works with Android.
 If that doesn't work for whatever reason created a workshop and make sure it has the following plugins:
+
 cordova-plugin-console
+
 cordova-plugin-device
+
 cordova-plugin-dialogs
+
 cordova-plugin-googleplus
+
 cordova-plugin-whitelist
 
 Also make sure the plaforms is android.
